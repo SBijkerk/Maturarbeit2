@@ -5,9 +5,9 @@ public class Ackermann {
 	
 	int a;
 	int b;
-	BenchmarkStart p;
+	Program p;
 	
-	public Ackermann(int base, int exp, BenchmarkStart p) {
+	public Ackermann(int base, int exp, Program p) {
 		a = base;
 		b = exp;
 		this.p = p;

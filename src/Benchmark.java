@@ -4,18 +4,18 @@
 public class Benchmark {
 
 	// Primzahlen
-	static long maxAnzahlPrimzahlen = 10000;
+	static long maxAnzahlPrimzahlen = 100;
 	
 	// Fibonacci-Zahlen
-	static int fibonacciZahl = 20;
+	static int fibonacciZahl = 5;
 	
 	// Ackermann-Funktion
-	static int base = 4;
+	static int base = 2;
 	static int exp = 1;
 	
-	BenchmarkStart p;
+	Program p;
 	
-	public Benchmark(BenchmarkStart p) {
+	public Benchmark(Program p) {
 		this.p = p;
 	}
 

@@ -60,8 +60,8 @@ public class BenchmarkStart extends JFrame implements ActionListener {
         // Buttons abgeglichen. Wenn die Quelle des ActionEvents einer
         // der Buttons ist, wird der Text des JLabels entsprechend geändert
         if(ae.getSource() == this.button1){
-        	Benchmark ben = new Benchmark(this);
-            ben.startBenchmark();
+        	//Benchmark ben = new Benchmark();
+            //ben.startBenchmark();
             button1.setVisible(false);
             scrollpane.setVisible(true);
         }

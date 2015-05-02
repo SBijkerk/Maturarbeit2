@@ -4,9 +4,9 @@ public class FibonacciZahlen {
 	int count = 0;
 	int k;
 	
-	BenchmarkStart p;
+	Program p;
 
-	public FibonacciZahlen(int fibonacciZahl, BenchmarkStart p){
+	public FibonacciZahlen(int fibonacciZahl, Program p){
 		k = fibonacciZahl;
 		this.p = p;
 	}

@@ -2,9 +2,9 @@
 public class PrimzahlenBenchmark {
 
 	long limit;
-	BenchmarkStart p;
+	Program p;
 
-	public PrimzahlenBenchmark(long maxAnzahlPrimzahlen, BenchmarkStart p) {
+	public PrimzahlenBenchmark(long maxAnzahlPrimzahlen, Program p) {
 		limit = maxAnzahlPrimzahlen;
 		this.p = p;
 	}
