@@ -4,28 +4,34 @@
 public class Benchmark {
 
 	// Primzahlen
-	static long maxAnzahlPrimzahlen = 10;
+	static long maxAnzahlPrimzahlen = 10000;
 	
 	// Fibonacci-Zahlen
 	static int fibonacciZahl = 20;
 	
 	// Ackermann-Funktion
 	static int base = 4;
-	static int exp = 3;
+	static int exp = 1;
+	
+	BenchmarkStart p;
+	
+	public Benchmark(BenchmarkStart p) {
+		this.p = p;
+	}
 
 
-	public static void main(String[] args) {
+	public void startBenchmark() {
 
 		//zeit starten
 		long zeitStart = System.currentTimeMillis();
 
 
 		//benchmark starten
-		PrimzahlenBenchmark prim = new PrimzahlenBenchmark(maxAnzahlPrimzahlen);
+		PrimzahlenBenchmark prim = new PrimzahlenBenchmark(maxAnzahlPrimzahlen, p);
 		prim.primzahlenAusrechnen();
-		FibonacciZahlen fib = new FibonacciZahlen(fibonacciZahl);
+		FibonacciZahlen fib = new FibonacciZahlen(fibonacciZahl, p);
 		fib.fibRechnung();
-		Ackermann ack = new Ackermann(base, exp);
+		Ackermann ack = new Ackermann(base, exp, p);
 		ack.ackermannRechnung();
 
 		
@@ -34,7 +40,9 @@ public class Benchmark {
 		long zeitGesamt = zeitEnde - zeitStart;
 		double sekundenZeit = ((double)zeitGesamt)/1000;
 
-		System.out.println(sekundenZeit + " sec");
+		p.printErgebnis(sekundenZeit + " sec");
+		
+		
 
 	}
 }

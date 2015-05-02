@@ -3,14 +3,17 @@ public class FibonacciZahlen {
 
 	int count = 0;
 	int k;
+	
+	BenchmarkStart p;
 
-	public FibonacciZahlen(int fibonacciZahl){
+	public FibonacciZahlen(int fibonacciZahl, BenchmarkStart p){
 		k = fibonacciZahl;
+		this.p = p;
 	}
 
 	public void fibRechnung(){
-		System.out.println("fib(" + k + ") = " + fibonacciRech(k));
-		System.out.println("wurde " + count + "-Mal aufgerufen");
+		p.printErgebnis("fib(" + k + ") = " + fibonacciRech(k));
+		p.printErgebnis("wurde " + count + "-Mal aufgerufen");
 	}
 
 	public int fibonacciRech(int n) {

@@ -5,10 +5,12 @@ public class Ackermann {
 	
 	int a;
 	int b;
+	BenchmarkStart p;
 	
-	public Ackermann(int base, int exp) {
+	public Ackermann(int base, int exp, BenchmarkStart p) {
 		a = base;
 		b = exp;
+		this.p = p;
 	}
 	
 	public int ackRech(int n, int m) {
@@ -27,6 +29,6 @@ public class Ackermann {
 	}
 	
 	public void ackermannRechnung() {
-		System.out.println(ackRech(a, b));
+		p.printErgebnis(Integer.toString(ackRech(a, b)));
 	}
 }
