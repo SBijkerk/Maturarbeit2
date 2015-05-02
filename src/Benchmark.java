@@ -1,6 +1,6 @@
 
 
-// test2
+
 public class Benchmark {
 
 	// Primzahlen
