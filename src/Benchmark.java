@@ -19,7 +19,6 @@ public class Benchmark {
 		this.p = p;
 	}
 
-
 	public void startBenchmark() {
 
 		//zeit starten
@@ -41,7 +40,13 @@ public class Benchmark {
 		double sekundenZeit = ((double)zeitGesamt)/1000;
 
 		p.printErgebnis(sekundenZeit + " sec");
-		
+
+		Benchmark ben = new Benchmark(this);
+		ben.startBenchmark();
+
+		public void printErgebnis(String s) {
+			ergebnis.append(s + "\n");
+		}
 		
 
 	}
